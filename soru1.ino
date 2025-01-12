@@ -3,8 +3,8 @@
 #include <FirebaseArduino.h>
 
 // WiFi bağlantı bilgileri
-const char *ssid = "S24FE";      // WiFi ağı adı
-const char *password = "furkanbal"; // WiFi ağı şifresi
+const char *ssid = "";      // WiFi ağı adı
+const char *password = ""; // WiFi ağı şifresi
 
 // Web sunucu adresi ve portu
 const char* web_adresi = "checkip.dyndns.org";
@@ -12,13 +12,13 @@ const uint16_t port = 80;
 String uzanti = "/";
 
 // Firebase bilgileri
-#define FIREBASE_HOST "final2024-83658-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "sUQEwDuxtMOoxXrPe0cN8zYUD5tqURMXsPC5Uc0h"
+#define FIREBASE_HOST ""
+#define FIREBASE_AUTH ""
 
 // Thingspeak bilgileri
-const unsigned long channelID = 2782306;
-const char *readAPIKey = "S3RJE01HQL5GDSE8";
-const int fieldNumber = 7;
+const unsigned long channelID = ;
+const char *readAPIKey = "";
+const int fieldNumber = ;
 
 WiFiClient wifi_istemci;
 
@@ -93,7 +93,7 @@ void loop() {
 
   // Firebase'e sonuç yazma
   float sonuc = 2 * deger + ip_ilk_uc;
-  String etiket = "202213172032: " + String(sonuc);
+  String etiket = ": " + String(sonuc);
 
   Firebase.setFloat("Sonuc", sonuc);
 
